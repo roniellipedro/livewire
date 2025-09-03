@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Livewire</h1>
+    <livewire:hello-world />
 
     @livewireScripts
 </body>
