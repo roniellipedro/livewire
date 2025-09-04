@@ -15,6 +15,25 @@ class Counter extends Component
 
     public function increment($quantity)
     {
-        $this->number = $this->number + $quantity;
+        if ($quantity < 0 || $quantity > 5) {
+            $this->number = 0;
+            return;
+        }
+
+        if ($this->number < 5) {
+            $this->number = $this->number + $quantity;
+        }
+    }
+
+    public function decrement($quantity)
+    {
+        if ($quantity < 0 || $quantity > 5) {
+            $this->number = 0;
+            return;
+        }
+
+        if ($this->number > 0) {
+            $this->number = $this->number - $quantity;
+        }
     }
 }
