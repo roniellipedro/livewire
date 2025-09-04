@@ -13,27 +13,17 @@ class Counter extends Component
         return view('livewire.counter');
     }
 
-    public function increment($quantity)
+    public function increment()
     {
-        if ($quantity < 0 || $quantity > 5) {
-            $this->number = 0;
-            return;
-        }
-
         if ($this->number < 5) {
-            $this->number = $this->number + $quantity;
+            $this->number = $this->number + 1;
         }
     }
 
-    public function decrement($quantity)
+    public function decrement()
     {
-        if ($quantity < 0 || $quantity > 5) {
-            $this->number = 0;
-            return;
-        }
-
         if ($this->number > 0) {
-            $this->number = $this->number - $quantity;
+            $this->number = $this->number - 1;
         }
     }
 }
