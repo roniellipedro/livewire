@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <livewire:counter />
+    <livewire:user user="Alessandro" />
 
     @livewireScripts
 </body>
