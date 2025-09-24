@@ -15,6 +15,7 @@
 
     @livewire('user', [
         'user' => 'Alessandro',
+        'surname' => 'Kobs'
     ])
 
     @livewireScripts
