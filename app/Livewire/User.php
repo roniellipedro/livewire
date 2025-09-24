@@ -8,44 +8,42 @@ use Livewire\Component;
 class User extends Component
 {
     public $name = "Carregando...";
-    public $surname = "Carregando...";
-    public $hookName = "N/A";
-    public $propertyName = "N/A";
-    public $propertyValue = "N/A";
+    public $hookName = [];
+
 
     public function render()
     {
         return view("livewire.user");
     }
 
-    public function mount(Request $request, $user, $surname)
+    public function mount(Request $request, $user)
     {
         $this->name = $request->user ?? $user;
-        $this->surname = $request->surname ?? $surname;
-    }
-
-    // public function updated($property, $value)
-    // {
-    //     $value = strtoupper($value);
-
-    //     $this->name = $value;
-    //     $this->hookName = "Updated";
-    //     $this->propertyName = $property;
-    //     $this->propertyValue = $value;
-    // }
-
-    public function updating()
-    {
-        $this->hookName = "Updating...";
+        $this->hookName[] = "mount";
     }
 
     public function updatingName()
     {
-        $this->hookName = "Updating... Name";
+        $this->hookName[] = "updatingName";
     }
 
-    public function updatingSurname()
+    public function updatedName()
     {
-        $this->hookName = "Updating... Surname";
+        $this->hookName[] = "updatedName";
+    }
+
+    public function boot()
+    {
+        $this->hookName[] = "boot";
+    }
+
+    public function booted()
+    {
+        $this->hookName[] = "booted";
+    }
+
+    public function hydrate()
+    {
+        $this->hookName[] = "hydrate";
     }
 }

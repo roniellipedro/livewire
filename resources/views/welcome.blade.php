@@ -14,8 +14,7 @@
     {{-- <livewire:user user="Alessandro" /> --}}
 
     @livewire('user', [
-        'user' => 'Alessandro',
-        'surname' => 'Kobs'
+        'user' => 'Alessandro'
     ])
 
     @livewireScripts
