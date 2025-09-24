@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <livewire:user user="Alessandro" />
 
-    @livewire("user", [
-        "user" => "Alessandro 2"
-    ]);
+    {{-- <livewire:user user="Alessandro" /> --}}
+
+    @livewire('user', [
+        'user' => 'Alessandro',
+    ])
 
     @livewireScripts
 </body>
