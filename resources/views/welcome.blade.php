@@ -12,6 +12,10 @@
 <body>
     <livewire:user user="Alessandro" />
 
+    @livewire("user", [
+        "user" => "Alessandro 2"
+    ]);
+
     @livewireScripts
 </body>
 
